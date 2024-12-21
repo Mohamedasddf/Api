@@ -8,14 +8,6 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 
-from rest_framework.authtoken.models import Token
-from rest_framework.response import Response
-from rest_framework import status, viewsets
-from django.contrib.auth.models import User
-from rest_framework.authentication import TokenAuthentication
-from rest_framework.permissions import AllowAny
-from .serializers import UserSerializer
-
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
